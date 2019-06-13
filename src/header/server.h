@@ -3,5 +3,5 @@
 #include <pcap.h>
 #include "utilities.h"
 
-void packet handler(unsigned char *interface, const struct pcap_pkthdr* packet_header, const unsigned char* packet_data);
+void packet_handler(pcap_t * device);
 #endif // SERVER_H

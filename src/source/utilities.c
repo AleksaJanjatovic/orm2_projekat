@@ -253,7 +253,7 @@ unsigned short calc_ip_checksum(const ip_header_t *ih) {
     unsigned short *buff = (unsigned short*)ih;
 
     for (i = 0; i < 10; i++) {
-
+        if (i == 5) continue;
         sum += buff[i];
         if(sum >> 16)//ako imamo carry pit onda ga dodajemo napred
             sum = (sum & 0xffff) + 1;
